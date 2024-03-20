@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="iris_platform">
+    <include>
+      <uri>/home/lee/workspace/Gazebo_ws/platform/platform</uri>
+      <pose>0 0 0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>iris_1</name>
+      <uri>/home/lee/workspace/Gazebo_ws/iris</uri>
+      <pose>0.8 0 0.1 0 0 3.14159</pose>
+    </include>
+
+   <include>
+      <name>iris_2</name>
+      <uri>/home/lee/workspace/Gazebo_ws/iris</uri>
+      <pose>0 0.8 0.1 0 0 -1.57079633 </pose>
+   </include>
+   
+
+    <include>
+      <name>iris_3</name>
+      <uri>/home/lee/workspace/Gazebo_ws/iris</uri>
+      <pose>-0.8 0 0.1 0 0 0</pose>
+    </include>  
+
+
+    <include>
+      <name>iris_4</name>
+      <uri>/home/lee/workspace/Gazebo_ws/iris</uri>
+      <pose>0 -0.8 0.1 0 0 1.57079633</pose>
+    </include>  
+
+    <joint name='link_0_2_iris1' type='revolute'>
+      <parent>platform_0::link_0</parent>
+      <child>iris_1::base_link</child>
+      <pose>0 0 0 0 -0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>-1</effort>
+          <velocity>-1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint>
+
+  <joint name='link_1_0_2_iris2' type='revolute'>
+      <parent>platform_0::link_1</parent>
+      <child>iris_2::base_link</child>
+      <pose>0 0 0 0 -0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>-1</effort>
+          <velocity>-1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint> 
+
+  <joint name='link_1_0_2_iris4' type='revolute'>
+      <parent>platform_0::link_1_0</parent>
+      <child>iris_4::base_link</child>
+      <pose>0 0 0 0 -0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>-1</effort>
+          <velocity>-1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint> 
+
+  <joint name='link_0_0_2_iris3' type='revolute'>
+      <parent>platform_0::link_0_0</parent>
+      <child>iris_3::base_link</child>
+      <pose>0 0 0 0 -0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>-1</effort>
+          <velocity>-1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint>  -->
+
+
+  </model>
+</sdf>
