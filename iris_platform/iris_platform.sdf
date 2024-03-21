@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<sdf version="1.7">
-  <model name="iris_platform">
+<sdf version='1.6'>
+  <model name='iris_platform'>
     <include>
       <uri>/home/lee/workspace/Gazebo_ws/platform/platform</uri>
       <pose>0 0 0.1 0 0 0</pose>
@@ -158,8 +158,7 @@
           </suspension>
         </ode>
       </physics>
-    </joint>  -->
-
+    </joint> 
 
   </model>
 </sdf>
