@@ -10,6 +10,8 @@
     <arg name="verbose" default="false"/>
     <arg name="paused" default="false"/>
     <!-- Gazebo sim -->
+
+
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="gui" value="$(arg gui)"/>
         <arg name="world_name" value="$(arg world)"/>
@@ -17,128 +19,91 @@
         <arg name="verbose" value="$(arg verbose)"/>
         <arg name="paused" value="$(arg paused)"/>
     </include>
-    <!-- UAV0 -->
+
     <group ns="uav0">
-        <!-- MAVROS and vehicle configs -->
         <arg name="est" default="ekf2"/>
         <arg name="vehicle" default="iris"/>
         <arg name="ID" value="0"/>
         <env name="PX4_SIM_MODEL" value="gazebo-classic_$(arg vehicle)" />
-        <!-- PX4 SITL and vehicle spawn -->
         <arg name="mavlink_udp_port" value="14560"/>
-        <arg name="mavlink_tcp_port" value="4560"/>
-        <arg name="gst_udp_port" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="video_uri" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="mavlink_cam_udp_port" value="$(eval 14530 + arg('ID'))"/>
-        <arg name="mavlink_id" value="$(eval 1 + arg('ID'))" />
+        <arg name="mavlink_tcp_port" value="4560"/>  
         <arg name="interactive" default="true"/>
-        <arg name="cmd" default="$(find mavlink_sitl_gazebo)/scripts/jinja_gen.py --stdout --mavlink_id=$(arg mavlink_id) --mavlink_udp_port=$(arg mavlink_udp_port) --mavlink_tcp_port=$(arg mavlink_tcp_port) --gst_udp_port=$(arg gst_udp_port) --video_uri=$(arg video_uri) --mavlink_cam_udp_port=$(arg mavlink_cam_udp_port) $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf.jinja $(find mavlink_sitl_gazebo)"/>
-        <param command="$(arg cmd)" name="sdf_$(arg vehicle)$(arg ID)"/>
+      <!--  <arg name="cmd" default="xmlstarlet ed -d '// plugin[@name=&quot;mavlink_interface&quot;]/mavlink_tcp_port' -s '//plugin[@name=&quot;mavlink_interface&quot;]' -t elem -n mavlink_tcp_port -v $(arg mavlink_tcp_port) /home/lee/workspace/Gazebo_ws/world/ucla_world.world"/>
+        <param command="$(arg cmd)" name="model_description"/> -->
         <arg unless="$(arg interactive)" name="px4_command_arg1" value=""/>
         <arg     if="$(arg interactive)" name="px4_command_arg1" value="-d"/>
-        <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen" args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
+        <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen"  args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w si   tl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
         </node>
         <arg name="fcu_url" default="udp://:14540@localhost:14580"/>
-        <!-- MAVROS -->
+        
         <include file="$(find mavros)/launch/px4.launch">
+            
             <arg name="fcu_url" value="$(arg fcu_url)"/>
             <arg name="gcs_url" value=""/>
-            <arg name="tgt_system" value="$(eval 1 + arg('ID'))"/>
+            <arg name="tgt_system" value="$(eval 1 + 0)"/>
             <arg name="tgt_component" value="1"/>
         </include>
     </group>
-    <!-- UAV1 -->
+
     <group ns="uav1">
-        <!-- MAVROS and vehicle configs -->
-        <arg name="ID" value="1"/>
         <arg name="est" default="ekf2"/>
         <arg name="vehicle" default="iris"/>
+        <arg name="ID" value="1"/>
         <env name="PX4_SIM_MODEL" value="gazebo-classic_$(arg vehicle)" />
-        <!-- PX4 SITL and vehicle spawn -->
         <arg name="mavlink_udp_port" value="14561"/>
-        <arg name="mavlink_tcp_port" value="4560"/>
-        <arg name="gst_udp_port" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="video_uri" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="mavlink_cam_udp_port" value="$(eval 14530 + arg('ID'))"/>
-        <arg name="mavlink_id" value="$(eval 1 + arg('ID'))" />
+        <arg name="mavlink_tcp_port" value="4560"/>  
         <arg name="interactive" default="true"/>
-        <arg name="cmd" default="/$(find mavlink_sitl_gazebo)/scripts/jinja_gen.py --stdout --mavlink_id=$(arg mavlink_id) --mavlink_udp_port=$(arg mavlink_udp_port) --mavlink_tcp_port=$(arg mavlink_tcp_port) --gst_udp_port=$(arg gst_udp_port) --video_uri=$(arg video_uri) --mavlink_cam_udp_port=$(arg mavlink_cam_udp_port) $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf.jinja $(find mavlink_sitl_gazebo)"/>
-        <param command="$(arg cmd)" name="sdf_$(arg vehicle)$(arg ID)"/>
+      <!--  <arg name="cmd" default="xmlstarlet ed -d '//plugin[@robotNamespace=&quot;uav1&quot; and @name=&quot;mavlink_interface&quot;]/mavlink_tcp_port' -s '//plugin[@name=&quot;mavlink_interface&quot; and @robotNamespace=&quot;uav1&quot;]' -t elem -n mavlink_tcp_port -v $(arg mavlink_tcp_port) /home/lee/workspace/Gazebo_ws/world/ucla_world.world"/>
+        <param command="$(arg cmd)" name="model_description"/> -->
         <arg unless="$(arg interactive)" name="px4_command_arg1" value=""/>
         <arg     if="$(arg interactive)" name="px4_command_arg1" value="-d"/>
-        <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen" args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
+        <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen"  args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
         </node>
         <arg name="fcu_url" default="udp://:14541@localhost:14581"/>
-    
-        <!-- MAVROS -->
         <include file="$(find mavros)/launch/px4.launch">
             <arg name="fcu_url" value="$(arg fcu_url)"/>
             <arg name="gcs_url" value=""/>
-            <arg name="tgt_system" value="$(eval 1 + arg('ID'))"/>
+            <arg name="tgt_system" value="$(eval 1 +1)"/>
             <arg name="tgt_component" value="1"/>
         </include>
     </group>
-    <!-- UAV2 -->
+
     <group ns="uav2">
-        <!-- MAVROS and vehicle configs -->
-        <arg name="ID" value="2"/>
         <arg name="est" default="ekf2"/>
         <arg name="vehicle" default="iris"/>
+        <arg name="ID" value="2"/>
         <env name="PX4_SIM_MODEL" value="gazebo-classic_$(arg vehicle)" />
-        <!-- PX4 SITL and vehicle spawn -->
         <arg name="mavlink_udp_port" value="14562"/>
-        <arg name="mavlink_tcp_port" value="4560"/>
-        <arg name="gst_udp_port" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="video_uri" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="mavlink_cam_udp_port" value="$(eval 14530 + arg('ID'))"/>
-        <arg name="mavlink_id" value="$(eval 1 + arg('ID'))" />
+        <arg name="mavlink_tcp_port" value="4560"/>  
         <arg name="interactive" default="true"/>
-        <arg name="cmd" default="/$(find mavlink_sitl_gazebo)/scripts/jinja_gen.py --stdout --mavlink_id=$(arg mavlink_id) --mavlink_udp_port=$(arg mavlink_udp_port) --mavlink_tcp_port=$(arg mavlink_tcp_port) --gst_udp_port=$(arg gst_udp_port) --video_uri=$(arg video_uri) --mavlink_cam_udp_port=$(arg mavlink_cam_udp_port) $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf.jinja $(find mavlink_sitl_gazebo)"/>
-        <param command="$(arg cmd)" name="sdf_$(arg vehicle)$(arg ID)"/>
+    <!--    <arg name="cmd" default="xmlstarlet ed -d '//plugin[@robotNamespace=&quot;uav2&quot; and @name=&quot;mavlink_interface&quot;]/mavlink_tcp_port' -s '//plugin[@name=&quot;mavlink_interface&quot; and @robotNamespace=&quot;uav2&quot;]' -t elem -n mavlink_tcp_port -v $(arg mavlink_tcp_port) /home/lee/workspace/Gazebo_ws/world/ucla_world.world"/>
+        <param command="$(arg cmd)" name="model_description"/> -->
         <arg unless="$(arg interactive)" name="px4_command_arg1" value=""/>
         <arg     if="$(arg interactive)" name="px4_command_arg1" value="-d"/>
         <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen" args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
         </node>
         <arg name="fcu_url" default="udp://:14542@localhost:14582"/>
-        <!-- MAVROS -->
         <include file="$(find mavros)/launch/px4.launch">
             <arg name="fcu_url" value="$(arg fcu_url)"/>
             <arg name="gcs_url" value=""/>
-            <arg name="tgt_system" value="$(eval 1 + arg('ID'))"/>
+            <arg name="tgt_system" value="$(eval 1 + 2)"/>
             <arg name="tgt_component" value="1"/>
         </include>
     </group>
-
+<!--
     <group ns="uav3">
-        <!-- MAVROS and vehicle configs -->
-        <arg name="ID" value="3"/>
         <arg name="est" default="ekf2"/>
         <arg name="vehicle" default="iris"/>
-        <env name="PX4_SIM_MODEL" value="gazebo-classic_$(arg vehicle)" />
-        <!-- PX4 SITL and vehicle spawn -->
-        <arg name="mavlink_udp_port" value="14563"/>
-        <arg name="mavlink_tcp_port" value="4560"/>
-        <arg name="gst_udp_port" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="video_uri" value="$(eval 5600 + arg('ID'))"/>
-        <arg name="mavlink_cam_udp_port" value="$(eval 14530 + arg('ID'))"/>
-        <arg name="mavlink_id" value="$(eval 1 + arg('ID'))" />
-        <arg name="interactive" default="true"/>
-        <arg name="cmd" default="/$(find mavlink_sitl_gazebo)/scripts/jinja_gen.py --stdout --mavlink_id=$(arg mavlink_id) --mavlink_udp_port=$(arg mavlink_udp_port) --mavlink_tcp_port=$(arg mavlink_tcp_port) --gst_udp_port=$(arg gst_udp_port) --video_uri=$(arg video_uri) --mavlink_cam_udp_port=$(arg mavlink_cam_udp_port) $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf.jinja $(find mavlink_sitl_gazebo)"/>
-        <param command="$(arg cmd)" name="sdf_$(arg vehicle)$(arg ID)"/>
-        <arg unless="$(arg interactive)" name="px4_command_arg1" value=""/>
-        <arg     if="$(arg interactive)" name="px4_command_arg1" value="-d"/>
-        <node name="sitl_$(arg ID)" pkg="px4" type="px4" output="screen" args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)">
-        </node>
+        <arg name="ID" value="3"/>
         <arg name="fcu_url" default="udp://:14543@localhost:14583"/>
-   
-        <!-- MAVROS -->
         <include file="$(find mavros)/launch/px4.launch">
             <arg name="fcu_url" value="$(arg fcu_url)"/>
-            <arg name="gcs_url" value=""/>
+            <arg name="gcs_url" value=""/> 
+            
             <arg name="tgt_system" value="$(eval 1 + arg('ID'))"/>
             <arg name="tgt_component" value="1"/>
         </include>
-    </group>
+    </group>  -->  
 </launch>
 <!-- to add more UAVs (up to 10):
 Increase the id

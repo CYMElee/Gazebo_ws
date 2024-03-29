@@ -837,11 +837,12 @@
       </joint>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <frame name='uav0::__model__' attached_to='uav0::base_link'>
+      
+      <frame name='iris0::__model__' attached_to='iris0::base_link'>
         <pose relative_to='__model__'>0.8 0 0.1 0 -0 3.14159</pose>
       </frame>
-      <link name='uav0::base_link'>
-        <pose relative_to='uav0::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris0::base_link'>
+        <pose relative_to='iris0::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1.5</mass>
@@ -899,8 +900,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <link name='uav0::/imu_link'>
-        <pose relative_to='uav0::__model__'>0 0 0.02 0 -0 0</pose>
+      <link name='iris0::/imu_link'>
+        <pose relative_to='iris0::__model__'>0 0 0.02 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -917,11 +918,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::/imu_joint' type='revolute'>
-        <child>uav0::/imu_link</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::/imu_joint' type='revolute'>
+        <child>iris0::/imu_link</child>
+        <parent>iris0::base_link</parent>
         <axis>
-          <xyz expressed_in='uav0::__model__'>1 0 0</xyz>
+          <xyz expressed_in='iris0::__model__'>1 0 0</xyz>
           <limit>
             <lower>0</lower>
             <upper>0</upper>
@@ -934,8 +935,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav0::rotor_0'>
-        <pose relative_to='uav0::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
+      <link name='iris0::rotor_0'>
+        <pose relative_to='iris0::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -991,11 +992,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::rotor_0_joint' type='revolute'>
-        <child>uav0::rotor_0</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::rotor_0_joint' type='revolute'>
+        <child>iris0::rotor_0</child>
+        <parent>iris0::base_link</parent>
         <axis>
-          <xyz expressed_in='uav0::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris0::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1006,8 +1007,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav0::rotor_1'>
-        <pose relative_to='uav0::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
+      <link name='iris0::rotor_1'>
+        <pose relative_to='iris0::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1063,11 +1064,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::rotor_1_joint' type='revolute'>
-        <child>uav0::rotor_1</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::rotor_1_joint' type='revolute'>
+        <child>iris0::rotor_1</child>
+        <parent>iris0::base_link</parent>
         <axis>
-          <xyz expressed_in='uav0::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris0::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1078,8 +1079,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav0::rotor_2'>
-        <pose relative_to='uav0::__model__'>0.13 0.22 0.023 0 -0 0</pose>
+      <link name='iris0::rotor_2'>
+        <pose relative_to='iris0::__model__'>0.13 0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1135,11 +1136,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::rotor_2_joint' type='revolute'>
-        <child>uav0::rotor_2</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::rotor_2_joint' type='revolute'>
+        <child>iris0::rotor_2</child>
+        <parent>iris0::base_link</parent>
         <axis>
-          <xyz expressed_in='uav0::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris0::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1150,8 +1151,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav0::rotor_3'>
-        <pose relative_to='uav0::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
+      <link name='iris0::rotor_3'>
+        <pose relative_to='iris0::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1207,11 +1208,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::rotor_3_joint' type='revolute'>
-        <child>uav0::rotor_3</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::rotor_3_joint' type='revolute'>
+        <child>iris0::rotor_3</child>
+        <parent>iris0::base_link</parent>
         <axis>
-          <xyz expressed_in='uav0::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris0::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1223,14 +1224,12 @@
         </axis>
       </joint>
       <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav0::base_link</linkName>
+        <linkName>iris0::base_link</linkName>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav0::rotor_0_joint</jointName>
-        <linkName>uav0::rotor_0</linkName>
+        <jointName>iris0::rotor_0_joint</jointName>
+        <linkName>iris0::rotor_0</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1245,9 +1244,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav0::rotor_1_joint</jointName>
-        <linkName>uav0::rotor_1</linkName>
+        
+        <jointName>iris0::rotor_1_joint</jointName>
+        <linkName>iris0::rotor_1</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1262,9 +1261,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav0::rotor_2_joint</jointName>
-        <linkName>uav0::rotor_2</linkName>
+        
+        <jointName>iris0::rotor_2_joint</jointName>
+        <linkName>iris0::rotor_2</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1279,9 +1278,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav0::rotor_3_joint</jointName>
-        <linkName>uav0::rotor_3</linkName>
+        
+        <jointName>iris0::rotor_3_joint</jointName>
+        <linkName>iris0::rotor_3</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1295,11 +1294,11 @@
         <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
-      <frame name='uav0::gps0::__model__' attached_to='uav0::gps0::link'>
-        <pose relative_to='uav0::__model__'>0.05 0 0.04 0 -0 0</pose>
+      <frame name='iris0::gps0::__model__' attached_to='iris0::gps0::link'>
+        <pose relative_to='iris0::__model__'>0.05 0 0.04 0 -0 0</pose>
       </frame>
-      <link name='uav0::gps0::link'>
-        <pose relative_to='uav0::gps0::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris0::gps0::link'>
+        <pose relative_to='iris0::gps0::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -1332,7 +1331,7 @@
           <always_on>1</always_on>
           <visualize>0</visualize>
           <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
-            <robotNamespace/>
+            
             <gpsNoise>1</gpsNoise>
             <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
             <gpsZRandomWalk>4.0</gpsZRandomWalk>
@@ -1347,15 +1346,15 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav0::gps0_joint' type='fixed'>
-        <child>uav0::gps0::link</child>
-        <parent>uav0::base_link</parent>
+      <joint name='iris0::gps0_joint' type='fixed'>
+        <child>iris0::gps0::link</child>
+        <parent>iris0::base_link</parent>
       </joint>
       <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
-        <robotNamespace/>
+        
       </plugin>
       <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
-        <robotNamespace/>
+        
         <pubRate>100</pubRate>
         <noiseDensity>0.0004</noiseDensity>
         <randomWalk>6.4e-06</randomWalk>
@@ -1363,13 +1362,12 @@
         <magTopic>/mag</magTopic>
       </plugin>
       <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
-        <robotNamespace/>
+        
         <pubRate>50</pubRate>
         <baroTopic>/baro</baroTopic>
         <baroDriftPaPerSec>0</baroDriftPaPerSec>
       </plugin>
       <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-        <robotNamespace/>
         <imuSubTopic>/imu</imuSubTopic>
         <magSubTopic>/mag</magSubTopic>
         <baroSubTopic>/baro</baroSubTopic>
@@ -1488,9 +1486,8 @@
         </control_channels>
       </plugin>
       <static>0</static>
-      <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav0::/imu_link</linkName>
+      <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'> 
+        <linkName>iris0::/imu_link</linkName>
         <imuTopic>/imu</imuTopic>
         <gyroscopeNoiseDensity>0.00018665</gyroscopeNoiseDensity>
         <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
@@ -1501,11 +1498,11 @@
         <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
         <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
       </plugin>
-      <frame name='uav1::__model__' attached_to='uav1::base_link'>
+      <frame name='iris_1::__model__' attached_to='iris_1::base_link'>
         <pose relative_to='__model__'>0 0.8 0.1 0 0 -1.5708</pose>
       </frame>
-      <link name='uav1::base_link'>
-        <pose relative_to='uav1::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris_1::base_link'>
+        <pose relative_to='iris_1::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1.5</mass>
@@ -1563,8 +1560,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <link name='uav1::/imu_link'>
-        <pose relative_to='uav1::__model__'>0 0 0.02 0 -0 0</pose>
+      <link name='iris_1::/imu_link'>
+        <pose relative_to='iris_1::__model__'>0 0 0.02 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -1581,11 +1578,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::/imu_joint' type='revolute'>
-        <child>uav1::/imu_link</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::/imu_joint' type='revolute'>
+        <child>iris_1::/imu_link</child>
+        <parent>iris_1::base_link</parent>
         <axis>
-          <xyz expressed_in='uav1::__model__'>1 0 0</xyz>
+          <xyz expressed_in='iris_1::__model__'>1 0 0</xyz>
           <limit>
             <lower>0</lower>
             <upper>0</upper>
@@ -1598,8 +1595,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav1::rotor_0'>
-        <pose relative_to='uav1::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
+      <link name='iris_1::rotor_0'>
+        <pose relative_to='iris_1::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1655,11 +1652,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::rotor_0_joint' type='revolute'>
-        <child>uav1::rotor_0</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::rotor_0_joint' type='revolute'>
+        <child>iris_1::rotor_0</child>
+        <parent>iris_1::base_link</parent>
         <axis>
-          <xyz expressed_in='uav1::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris_1::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1670,8 +1667,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav1::rotor_1'>
-        <pose relative_to='uav1::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
+      <link name='iris_1::rotor_1'>
+        <pose relative_to='iris_1::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1727,11 +1724,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::rotor_1_joint' type='revolute'>
-        <child>uav1::rotor_1</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::rotor_1_joint' type='revolute'>
+        <child>iris_1::rotor_1</child>
+        <parent>iris_1::base_link</parent>
         <axis>
-          <xyz expressed_in='uav1::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris_1::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1742,8 +1739,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav1::rotor_2'>
-        <pose relative_to='uav1::__model__'>0.13 0.22 0.023 0 -0 0</pose>
+      <link name='iris_1::rotor_2'>
+        <pose relative_to='iris_1::__model__'>0.13 0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1799,11 +1796,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::rotor_2_joint' type='revolute'>
-        <child>uav1::rotor_2</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::rotor_2_joint' type='revolute'>
+        <child>iris_1::rotor_2</child>
+        <parent>iris_1::base_link</parent>
         <axis>
-          <xyz expressed_in='uav1::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris_1::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1814,8 +1811,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav1::rotor_3'>
-        <pose relative_to='uav1::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
+      <link name='iris_1::rotor_3'>
+        <pose relative_to='iris_1::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -1871,11 +1868,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::rotor_3_joint' type='revolute'>
-        <child>uav1::rotor_3</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::rotor_3_joint' type='revolute'>
+        <child>iris_1::rotor_3</child>
+        <parent>iris_1::base_link</parent>
         <axis>
-          <xyz expressed_in='uav1::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris_1::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -1887,14 +1884,12 @@
         </axis>
       </joint>
       <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav1::base_link</linkName>
+        <linkName>iris_1::base_link</linkName>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav1::rotor_0_joint</jointName>
-        <linkName>uav1::rotor_0</linkName>
+        <jointName>iris_1::rotor_0_joint</jointName>
+        <linkName>iris_1::rotor_0</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1908,10 +1903,9 @@
         <motorSpeedPubTopic>/motor_speed/0</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
-      <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav1::rotor_1_joint</jointName>
-        <linkName>uav1::rotor_1</linkName>
+      <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'> 
+        <jointName>iris_1::rotor_1_joint</jointName>
+        <linkName>iris_1::rotor_1</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1926,9 +1920,8 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav1::rotor_2_joint</jointName>
-        <linkName>uav1::rotor_2</linkName>
+        <jointName>iris_1::rotor_2_joint</jointName>
+        <linkName>iris_1::rotor_2</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1943,9 +1936,8 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav1::rotor_3_joint</jointName>
-        <linkName>uav1::rotor_3</linkName>
+        <jointName>iris_1::rotor_3_joint</jointName>
+        <linkName>iris_1::rotor_3</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -1959,11 +1951,11 @@
         <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
-      <frame name='uav1::gps0::__model__' attached_to='uav1::gps0::link'>
-        <pose relative_to='uav1::__model__'>0.05 0 0.04 0 -0 0</pose>
+      <frame name='iris_1::gps0::__model__' attached_to='iris_1::gps0::link'>
+        <pose relative_to='iris_1::__model__'>0.05 0 0.04 0 -0 0</pose>
       </frame>
-      <link name='uav1::gps0::link'>
-        <pose relative_to='uav1::gps0::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris_1::gps0::link'>
+        <pose relative_to='iris_1::gps0::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -1996,7 +1988,6 @@
           <always_on>1</always_on>
           <visualize>0</visualize>
           <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
-            <robotNamespace/>
             <gpsNoise>1</gpsNoise>
             <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
             <gpsZRandomWalk>4.0</gpsZRandomWalk>
@@ -2011,15 +2002,14 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav1::gps0_joint' type='fixed'>
-        <child>uav1::gps0::link</child>
-        <parent>uav1::base_link</parent>
+      <joint name='iris_1::gps0_joint' type='fixed'>
+        <child>iris_1::gps0::link</child>
+        <parent>iris_1::base_link</parent>
       </joint>
       <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
-        <robotNamespace/>
+        
       </plugin>
       <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
-        <robotNamespace/>
         <pubRate>100</pubRate>
         <noiseDensity>0.0004</noiseDensity>
         <randomWalk>6.4e-06</randomWalk>
@@ -2027,18 +2017,16 @@
         <magTopic>/mag</magTopic>
       </plugin>
       <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
-        <robotNamespace/>
         <pubRate>50</pubRate>
         <baroTopic>/baro</baroTopic>
         <baroDriftPaPerSec>0</baroDriftPaPerSec>
       </plugin>
       <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-        <robotNamespace/>
         <imuSubTopic>/imu</imuSubTopic>
         <magSubTopic>/mag</magSubTopic>
         <baroSubTopic>/baro</baroSubTopic>
         <mavlink_addr>INADDR_ANY</mavlink_addr>
-        <mavlink_tcp_port>4561</mavlink_tcp_port>
+        <mavlink_tcp_port>4560</mavlink_tcp_port>
         <mavlink_udp_port>14561</mavlink_udp_port>
         <serialEnabled>0</serialEnabled>
         <serialDevice>/dev/ttyACM0</serialDevice>
@@ -2153,8 +2141,7 @@
       </plugin>
       <static>0</static>
       <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav1::/imu_link</linkName>
+        <linkName>iris_1::/imu_link</linkName>
         <imuTopic>/imu</imuTopic>
         <gyroscopeNoiseDensity>0.00018665</gyroscopeNoiseDensity>
         <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
@@ -2165,11 +2152,11 @@
         <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
         <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
       </plugin>
-      <frame name='uav2::__model__' attached_to='uav2::base_link'>
+      <frame name='iris2::__model__' attached_to='iris2::base_link'>
         <pose relative_to='__model__'>-0.8 0 0.1 0 -0 0</pose>
       </frame>
-      <link name='uav2::base_link'>
-        <pose relative_to='uav2::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris2::base_link'>
+        <pose relative_to='iris2::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1.5</mass>
@@ -2227,8 +2214,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <link name='uav2::/imu_link'>
-        <pose relative_to='uav2::__model__'>0 0 0.02 0 -0 0</pose>
+      <link name='iris2::/imu_link'>
+        <pose relative_to='iris2::__model__'>0 0 0.02 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -2245,11 +2232,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::/imu_joint' type='revolute'>
-        <child>uav2::/imu_link</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::/imu_joint' type='revolute'>
+        <child>iris2::/imu_link</child>
+        <parent>iris2::base_link</parent>
         <axis>
-          <xyz expressed_in='uav2::__model__'>1 0 0</xyz>
+          <xyz expressed_in='iris2::__model__'>1 0 0</xyz>
           <limit>
             <lower>0</lower>
             <upper>0</upper>
@@ -2262,8 +2249,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav2::rotor_0'>
-        <pose relative_to='uav2::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
+      <link name='iris2::rotor_0'>
+        <pose relative_to='iris2::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -2319,11 +2306,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::rotor_0_joint' type='revolute'>
-        <child>uav2::rotor_0</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::rotor_0_joint' type='revolute'>
+        <child>iris2::rotor_0</child>
+        <parent>iris2::base_link</parent>
         <axis>
-          <xyz expressed_in='uav2::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris2::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -2334,8 +2321,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav2::rotor_1'>
-        <pose relative_to='uav2::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
+      <link name='iris2::rotor_1'>
+        <pose relative_to='iris2::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -2391,11 +2378,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::rotor_1_joint' type='revolute'>
-        <child>uav2::rotor_1</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::rotor_1_joint' type='revolute'>
+        <child>iris2::rotor_1</child>
+        <parent>iris2::base_link</parent>
         <axis>
-          <xyz expressed_in='uav2::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris2::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -2406,8 +2393,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav2::rotor_2'>
-        <pose relative_to='uav2::__model__'>0.13 0.22 0.023 0 -0 0</pose>
+      <link name='iris2::rotor_2'>
+        <pose relative_to='iris2::__model__'>0.13 0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -2463,11 +2450,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::rotor_2_joint' type='revolute'>
-        <child>uav2::rotor_2</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::rotor_2_joint' type='revolute'>
+        <child>iris2::rotor_2</child>
+        <parent>iris2::base_link</parent>
         <axis>
-          <xyz expressed_in='uav2::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris2::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -2478,8 +2465,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav2::rotor_3'>
-        <pose relative_to='uav2::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
+      <link name='iris2::rotor_3'>
+        <pose relative_to='iris2::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -2535,11 +2522,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::rotor_3_joint' type='revolute'>
-        <child>uav2::rotor_3</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::rotor_3_joint' type='revolute'>
+        <child>iris2::rotor_3</child>
+        <parent>iris2::base_link</parent>
         <axis>
-          <xyz expressed_in='uav2::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris2::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -2551,14 +2538,12 @@
         </axis>
       </joint>
       <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav2::base_link</linkName>
+        <linkName>iris2::base_link</linkName>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav2::rotor_0_joint</jointName>
-        <linkName>uav2::rotor_0</linkName>
+        <jointName>iris2::rotor_0_joint</jointName>
+        <linkName>iris2::rotor_0</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -2573,9 +2558,8 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav2::rotor_1_joint</jointName>
-        <linkName>uav2::rotor_1</linkName>
+        <jointName>iris2::rotor_1_joint</jointName>
+        <linkName>iris2::rotor_1</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -2590,9 +2574,8 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav2::rotor_2_joint</jointName>
-        <linkName>uav2::rotor_2</linkName>
+        <jointName>iris2::rotor_2_joint</jointName>
+        <linkName>iris2::rotor_2</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -2607,9 +2590,8 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav2::rotor_3_joint</jointName>
-        <linkName>uav2::rotor_3</linkName>
+        <jointName>iris2::rotor_3_joint</jointName>
+        <linkName>iris2::rotor_3</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -2623,11 +2605,11 @@
         <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
-      <frame name='uav2::gps0::__model__' attached_to='uav2::gps0::link'>
-        <pose relative_to='uav2::__model__'>0.05 0 0.04 0 -0 0</pose>
+      <frame name='iris2::gps0::__model__' attached_to='iris2::gps0::link'>
+        <pose relative_to='iris2::__model__'>0.05 0 0.04 0 -0 0</pose>
       </frame>
-      <link name='uav2::gps0::link'>
-        <pose relative_to='uav2::gps0::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris2::gps0::link'>
+        <pose relative_to='iris2::gps0::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -2660,7 +2642,6 @@
           <always_on>1</always_on>
           <visualize>0</visualize>
           <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
-            <robotNamespace/>
             <gpsNoise>1</gpsNoise>
             <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
             <gpsZRandomWalk>4.0</gpsZRandomWalk>
@@ -2675,15 +2656,13 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav2::gps0_joint' type='fixed'>
-        <child>uav2::gps0::link</child>
-        <parent>uav2::base_link</parent>
+      <joint name='iris2::gps0_joint' type='fixed'>
+        <child>iris2::gps0::link</child>
+        <parent>iris2::base_link</parent>
       </joint>
       <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
-        <robotNamespace/>
       </plugin>
       <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
-        <robotNamespace/>
         <pubRate>100</pubRate>
         <noiseDensity>0.0004</noiseDensity>
         <randomWalk>6.4e-06</randomWalk>
@@ -2691,18 +2670,16 @@
         <magTopic>/mag</magTopic>
       </plugin>
       <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
-        <robotNamespace/>
         <pubRate>50</pubRate>
         <baroTopic>/baro</baroTopic>
         <baroDriftPaPerSec>0</baroDriftPaPerSec>
       </plugin>
       <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-        <robotNamespace/>
         <imuSubTopic>/imu</imuSubTopic>
         <magSubTopic>/mag</magSubTopic>
         <baroSubTopic>/baro</baroSubTopic>
         <mavlink_addr>INADDR_ANY</mavlink_addr>
-        <mavlink_tcp_port>4562</mavlink_tcp_port>
+        <mavlink_tcp_port>4560</mavlink_tcp_port>
         <mavlink_udp_port>14562</mavlink_udp_port>
         <serialEnabled>0</serialEnabled>
         <serialDevice>/dev/ttyACM0</serialDevice>
@@ -2815,10 +2792,10 @@
           </channel>
         </control_channels>
       </plugin>
+      
       <static>0</static>
       <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav2::/imu_link</linkName>
+        <linkName>iris2::/imu_link</linkName>
         <imuTopic>/imu</imuTopic>
         <gyroscopeNoiseDensity>0.00018665</gyroscopeNoiseDensity>
         <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
@@ -2829,11 +2806,12 @@
         <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
         <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
       </plugin>
-      <frame name='uav3::__model__' attached_to='uav3::base_link'>
+    
+      <frame name='iris3::__model__' attached_to='iris3::base_link'>
         <pose relative_to='__model__'>0 -0.8 0.1 0 -0 1.5708</pose>
       </frame>
-      <link name='uav3::base_link'>
-        <pose relative_to='uav3::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris3::base_link'>
+        <pose relative_to='iris3::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1.5</mass>
@@ -2891,8 +2869,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <link name='uav3::/imu_link'>
-        <pose relative_to='uav3::__model__'>0 0 0.02 0 -0 0</pose>
+      <link name='iris3::/imu_link'>
+        <pose relative_to='iris3::__model__'>0 0 0.02 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -2909,11 +2887,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::/imu_joint' type='revolute'>
-        <child>uav3::/imu_link</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::/imu_joint' type='revolute'>
+        <child>iris3::/imu_link</child>
+        <parent>iris3::base_link</parent>
         <axis>
-          <xyz expressed_in='uav3::__model__'>1 0 0</xyz>
+          <xyz expressed_in='iris3::__model__'>1 0 0</xyz>
           <limit>
             <lower>0</lower>
             <upper>0</upper>
@@ -2926,8 +2904,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav3::rotor_0'>
-        <pose relative_to='uav3::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
+      <link name='iris3::rotor_0'>
+        <pose relative_to='iris3::__model__'>0.13 -0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -2983,11 +2961,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::rotor_0_joint' type='revolute'>
-        <child>uav3::rotor_0</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::rotor_0_joint' type='revolute'>
+        <child>iris3::rotor_0</child>
+        <parent>iris3::base_link</parent>
         <axis>
-          <xyz expressed_in='uav3::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris3::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -2998,8 +2976,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav3::rotor_1'>
-        <pose relative_to='uav3::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
+      <link name='iris3::rotor_1'>
+        <pose relative_to='iris3::__model__'>-0.13 0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -3055,11 +3033,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::rotor_1_joint' type='revolute'>
-        <child>uav3::rotor_1</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::rotor_1_joint' type='revolute'>
+        <child>iris3::rotor_1</child>
+        <parent>iris3::base_link</parent>
         <axis>
-          <xyz expressed_in='uav3::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris3::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -3070,8 +3048,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav3::rotor_2'>
-        <pose relative_to='uav3::__model__'>0.13 0.22 0.023 0 -0 0</pose>
+      <link name='iris3::rotor_2'>
+        <pose relative_to='iris3::__model__'>0.13 0.22 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -3127,11 +3105,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::rotor_2_joint' type='revolute'>
-        <child>uav3::rotor_2</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::rotor_2_joint' type='revolute'>
+        <child>iris3::rotor_2</child>
+        <parent>iris3::base_link</parent>
         <axis>
-          <xyz expressed_in='uav3::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris3::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -3142,8 +3120,8 @@
           </dynamics>
         </axis>
       </joint>
-      <link name='uav3::rotor_3'>
-        <pose relative_to='uav3::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
+      <link name='iris3::rotor_3'>
+        <pose relative_to='iris3::__model__'>-0.13 -0.2 0.023 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.005</mass>
@@ -3199,11 +3177,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::rotor_3_joint' type='revolute'>
-        <child>uav3::rotor_3</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::rotor_3_joint' type='revolute'>
+        <child>iris3::rotor_3</child>
+        <parent>iris3::base_link</parent>
         <axis>
-          <xyz expressed_in='uav3::__model__'>0 0 1</xyz>
+          <xyz expressed_in='iris3::__model__'>0 0 1</xyz>
           <limit>
             <lower>-1e+16</lower>
             <upper>1e+16</upper>
@@ -3215,14 +3193,12 @@
         </axis>
       </joint>
       <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav3::base_link</linkName>
+        <linkName>iris3::base_link</linkName>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav3::rotor_0_joint</jointName>
-        <linkName>uav3::rotor_0</linkName>
+        <jointName>iris3::rotor_0_joint</jointName>
+        <linkName>iris3::rotor_0</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -3237,9 +3213,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav3::rotor_1_joint</jointName>
-        <linkName>uav3::rotor_1</linkName>
+        
+        <jointName>iris3::rotor_1_joint</jointName>
+        <linkName>iris3::rotor_1</linkName>
         <turningDirection>ccw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -3254,9 +3230,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_left_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav3::rotor_2_joint</jointName>
-        <linkName>uav3::rotor_2</linkName>
+        
+        <jointName>iris3::rotor_2_joint</jointName>
+        <linkName>iris3::rotor_2</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -3271,9 +3247,9 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_right_motor_model' filename='libgazebo_motor_model.so'>
-        <robotNamespace/>
-        <jointName>uav3::rotor_3_joint</jointName>
-        <linkName>uav3::rotor_3</linkName>
+        
+        <jointName>iris3::rotor_3_joint</jointName>
+        <linkName>iris3::rotor_3</linkName>
         <turningDirection>cw</turningDirection>
         <timeConstantUp>0.0125</timeConstantUp>
         <timeConstantDown>0.025</timeConstantDown>
@@ -3287,11 +3263,11 @@
         <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
-      <frame name='uav3::gps0::__model__' attached_to='uav3::gps0::link'>
-        <pose relative_to='uav3::__model__'>0.05 0 0.04 0 -0 0</pose>
+      <frame name='iris3::gps0::__model__' attached_to='iris3::gps0::link'>
+        <pose relative_to='iris3::__model__'>0.05 0 0.04 0 -0 0</pose>
       </frame>
-      <link name='uav3::gps0::link'>
-        <pose relative_to='uav3::gps0::__model__'>0 0 0 0 -0 0</pose>
+      <link name='iris3::gps0::link'>
+        <pose relative_to='iris3::gps0::__model__'>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>0.015</mass>
@@ -3324,7 +3300,7 @@
           <always_on>1</always_on>
           <visualize>0</visualize>
           <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
-            <robotNamespace/>
+            
             <gpsNoise>1</gpsNoise>
             <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
             <gpsZRandomWalk>4.0</gpsZRandomWalk>
@@ -3339,15 +3315,15 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint name='uav3::gps0_joint' type='fixed'>
-        <child>uav3::gps0::link</child>
-        <parent>uav3::base_link</parent>
+      <joint name='iris3::gps0_joint' type='fixed'>
+        <child>iris3::gps0::link</child>
+        <parent>iris3::base_link</parent>
       </joint>
       <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
-        <robotNamespace/>
+        
       </plugin>
       <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
-        <robotNamespace/>
+        
         <pubRate>100</pubRate>
         <noiseDensity>0.0004</noiseDensity>
         <randomWalk>6.4e-06</randomWalk>
@@ -3355,18 +3331,18 @@
         <magTopic>/mag</magTopic>
       </plugin>
       <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
-        <robotNamespace/>
+        
         <pubRate>50</pubRate>
         <baroTopic>/baro</baroTopic>
         <baroDriftPaPerSec>0</baroDriftPaPerSec>
       </plugin>
+    
       <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
-        <robotNamespace/>
         <imuSubTopic>/imu</imuSubTopic>
         <magSubTopic>/mag</magSubTopic>
         <baroSubTopic>/baro</baroSubTopic>
         <mavlink_addr>INADDR_ANY</mavlink_addr>
-        <mavlink_tcp_port>4563</mavlink_tcp_port>
+        <mavlink_tcp_port>4560</mavlink_tcp_port>
         <mavlink_udp_port>14563</mavlink_udp_port>
         <serialEnabled>0</serialEnabled>
         <serialDevice>/dev/ttyACM0</serialDevice>
@@ -3481,8 +3457,8 @@
       </plugin>
       <static>0</static>
       <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
-        <robotNamespace/>
-        <linkName>uav3::/imu_link</linkName>
+        
+        <linkName>iris3::/imu_link</linkName>
         <imuTopic>/imu</imuTopic>
         <gyroscopeNoiseDensity>0.00018665</gyroscopeNoiseDensity>
         <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
@@ -3493,9 +3469,10 @@
         <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
         <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
       </plugin>
-      <joint name='link_0_2_iris1' type='revolute'>
+      
+      <joint name='link_0_2_iris_1' type='revolute'>
         <parent>platform_0::link_0</parent>
-        <child>uav0::base_link</child>
+        <child>iris0::base_link</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
           <xyz>0 1 0</xyz>
@@ -3526,7 +3503,7 @@
       </joint>
       <joint name='link_1_0_2_iris2' type='revolute'>
         <parent>platform_0::link_1</parent>
-        <child>uav1::base_link</child>
+        <child>iris_1::base_link</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
           <xyz>0 1 0</xyz>
@@ -3557,7 +3534,7 @@
       </joint>
       <joint name='link_1_0_2_iris4' type='revolute'>
         <parent>platform_0::link_1_0</parent>
-        <child>uav3::base_link</child>
+        <child>iris3::base_link</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
           <xyz>0 1 0</xyz>
@@ -3588,7 +3565,7 @@
       </joint>
       <joint name='link_0_0_2_iris3' type='revolute'>
         <parent>platform_0::link_0_0</parent>
-        <child>uav2::base_link</child>
+        <child>iris2::base_link</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
           <xyz>1 0 0</xyz>
@@ -3634,172 +3611,173 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      
       <model name='iris_platform'>
         <pose>-1.3e-05 -1.4e-05 -0.051097 1e-06 0.000225 0</pose>
         <scale>1 1 1</scale>
-        <link name='uav0::/imu_link'>
+        <link name='iris0::/imu_link'>
           <pose>0.799852 4.6e-05 0.074498 0 0.002119 3.14159</pose>
           <velocity>-2e-06 1e-06 1e-06 -4.1e-05 -2.4e-05 -0</velocity>
           <acceleration>6.1e-05 0.003084 -1.8e-05 -0.100816 -0.000142 3.8e-05</acceleration>
           <wrench>1e-06 4.6e-05 -0 0 -0 0</wrench>
         </link>
-        <link name='uav0::base_link'>
+        <link name='iris0::base_link'>
           <pose>0.799894 4.6e-05 0.054498 0 0.002119 3.14159</pose>
           <velocity>-1e-06 0 1e-06 -8e-06 -2.4e-05 0</velocity>
           <acceleration>2e-06 0.001062 -1.8e-05 -0.019244 3.1e-05 -3.8e-05</acceleration>
           <wrench>3e-06 0.001594 -2.7e-05 0 -0 0</wrench>
         </link>
-        <link name='uav0::gps0::link'>
+        <link name='iris0::gps0::link'>
           <pose>0.74981 4.6e-05 0.094392 0 0.002119 3.14159</pose>
           <velocity>-2e-06 2e-06 -0 -4e-05 -2.4e-05 1e-06</velocity>
           <acceleration>5.9e-05 0.005674 -2.4e-05 -0.099257 -0.000148 0.002619</acceleration>
           <wrench>1e-06 8.5e-05 -0 0 -0 0</wrench>
         </link>
-        <link name='uav0::rotor_0'>
+        <link name='iris0::rotor_0'>
           <pose>0.669846 0.220046 0.077222 0 0.002119 3.14159</pose>
           <velocity>-2e-06 1e-06 -1.1e-05 -4.1e-05 -2.4e-05 -0</velocity>
           <acceleration>2.4e-05 0.002238 -0.011468 -0.052083 -4.9e-05 -0.00022</acceleration>
           <wrench>0 1.1e-05 -5.7e-05 0 -0 0</wrench>
         </link>
-        <link name='uav0::rotor_1'>
+        <link name='iris0::rotor_1'>
           <pose>0.929845 -0.199954 0.077773 0 0.002119 3.14159</pose>
           <velocity>-2e-06 1e-06 1.2e-05 -4.1e-05 -2.4e-05 -0</velocity>
           <acceleration>3e-05 0.00227 0.010388 -0.052073 -4.3e-05 -0.00022</acceleration>
           <wrench>0 1.1e-05 5.2e-05 0 -0 0</wrench>
         </link>
-        <link name='uav0::rotor_2'>
+        <link name='iris0::rotor_2'>
           <pose>0.669845 -0.219954 0.077222 0 0.002119 3.14159</pose>
           <velocity>-2e-06 1e-06 7e-06 -4.1e-05 -2.4e-05 -0</velocity>
           <acceleration>3.1e-05 0.002237 0.011415 -0.052064 -3.7e-05 -0.00022</acceleration>
           <wrench>0 1.1e-05 5.7e-05 0 -0 0</wrench>
         </link>
-        <link name='uav0::rotor_3'>
+        <link name='iris0::rotor_3'>
           <pose>0.929846 0.200046 0.077773 0 0.002119 3.14159</pose>
           <velocity>-2e-06 1e-06 -4e-06 -4.1e-05 -2.4e-05 -0</velocity>
           <acceleration>2.5e-05 0.002269 -0.010411 -0.052054 -4.3e-05 -0.00022</acceleration>
           <wrench>0 1.1e-05 -5.2e-05 0 -0 0</wrench>
         </link>
-        <link name='uav1::/imu_link'>
+        <link name='iris_1::/imu_link'>
           <pose>1.1e-05 0.799886 0.0745 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -2e-06 1e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>-0 7e-06 -0 2.1e-05 -0.001034 -1.6e-05</acceleration>
           <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav1::base_link'>
+        <link name='iris_1::base_link'>
           <pose>1.1e-05 0.799929 0.0545 -0 0.002128 -1.5708</pose>
           <velocity>0 -1e-06 1e-06 2.7e-05 7e-06 -0</velocity>
           <acceleration>-0 0 0 -0 -0 -0</acceleration>
           <wrench>-0 0 0 0 -0 0</wrench>
         </link>
-        <link name='uav1::gps0::link'>
+        <link name='iris_1::gps0::link'>
           <pose>1.1e-05 0.749844 0.094393 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -3e-06 -1e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>-1e-06 7e-06 -1e-06 2e-05 -0 -1.3e-05</acceleration>
           <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav1::rotor_0'>
+        <link name='iris_1::rotor_0'>
           <pose>-0.21999 0.669881 0.077223 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -2e-06 -1e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>7e-06 -4e-05 1.1e-05 0 0.000204 0</acceleration>
           <wrench>0 -0 0 0 -0 0</wrench>
         </link>
-        <link name='uav1::rotor_1'>
+        <link name='iris_1::rotor_1'>
           <pose>0.200011 0.929879 0.077776 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -2e-06 3e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>-7e-06 -1.7e-05 -1.1e-05 0 0.000201 0</acceleration>
           <wrench>-0 -0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav1::rotor_2'>
+        <link name='iris_1::rotor_2'>
           <pose>0.22001 0.66988 0.077223 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -2e-06 -4e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>7e-06 -1.6e-05 1.1e-05 0 0.000202 0</acceleration>
           <wrench>0 -0 0 0 -0 0</wrench>
         </link>
-        <link name='uav1::rotor_3'>
+        <link name='iris_1::rotor_3'>
           <pose>-0.199989 0.92988 0.077776 -0 0.002128 -1.5708</pose>
           <velocity>1e-06 -2e-06 6e-06 2.6e-05 7e-06 0</velocity>
           <acceleration>-7e-06 -3.9e-05 -1e-05 0 0.0002 0</acceleration>
           <wrench>-0 -0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::/imu_link'>
+        <link name='iris2::/imu_link'>
           <pose>-0.799839 3.7e-05 0.0745 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 -1e-06 2.7e-05 3.7e-05 0</velocity>
           <acceleration>2e-06 -2e-06 -0 0.071878 5e-06 -0.000143</acceleration>
           <wrench>0 -0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::base_link'>
+        <link name='iris2::base_link'>
           <pose>-0.799879 3.9e-05 0.0545 0.000126 0.001999 0</pose>
           <velocity>2e-06 0 -1e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>-0 -0 -0 0 -0 0</acceleration>
           <wrench>-0 -0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::gps0::link'>
+        <link name='iris2::gps0::link'>
           <pose>-0.749799 3.4e-05 0.0944 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 -3e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>3e-06 -6e-06 -4e-06 -1e-05 -2e-05 1.8e-05</acceleration>
           <wrench>0 -0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::rotor_0'>
+        <link name='iris2::rotor_0'>
           <pose>-0.669834 -0.219964 0.077212 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 -4e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>-9e-06 8e-06 7e-06 -1.8e-05 -2e-05 0</acceleration>
           <wrench>-0 0 0 0 -0 0</wrench>
         </link>
-        <link name='uav2::rotor_1'>
+        <link name='iris2::rotor_1'>
           <pose>-0.929833 0.200036 0.077785 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 2e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>-8e-06 9e-06 -6e-06 -1.8e-05 -2e-05 0</acceleration>
           <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::rotor_2'>
+        <link name='iris2::rotor_2'>
           <pose>-0.669834 0.220036 0.077268 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 -8e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>-8e-06 8e-06 -1e-06 -1.7e-05 -1.9e-05 0</acceleration>
           <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
-        <link name='uav2::rotor_3'>
+        <link name='iris2::rotor_3'>
           <pose>-0.929833 -0.199964 0.077734 0.000126 0.001999 0</pose>
           <velocity>3e-06 1e-06 6e-06 -9e-06 3.7e-05 -0</velocity>
           <acceleration>-9e-06 9e-06 1e-06 -1.7e-05 -1.9e-05 0</acceleration>
           <wrench>-0 0 0 0 -0 0</wrench>
         </link>
-        <link name='uav3::/imu_link'>
+        <link name='iris3::/imu_link'>
           <pose>1.1e-05 -0.800112 0.074496 0 -0.002112 1.5708</pose>
           <velocity>1e-06 -2e-06 1e-06 2.4e-05 4.6e-05 -0</velocity>
           <acceleration>0.002952 3.4e-05 6.1e-05 -0.000416 0.096122 -0.000237</acceleration>
           <wrench>4.4e-05 1e-06 1e-06 0 -0 0</wrench>
         </link>
-        <link name='uav3::base_link'>
+        <link name='iris3::base_link'>
           <pose>1.1e-05 -0.80007 0.054496 0 -0.002112 1.5708</pose>
           <velocity>1e-06 -1e-06 1e-06 2.4e-05 9e-06 0</velocity>
           <acceleration>0.001025 2.2e-05 5.9e-05 -0.000406 0.018579 4e-05</acceleration>
           <wrench>0.001537 3.4e-05 8.8e-05 0 -0 0</wrench>
         </link>
-        <link name='uav3::gps0::link'>
+        <link name='iris3::gps0::link'>
           <pose>1e-05 -0.750155 0.094602 0 -0.002112 1.5708</pose>
           <velocity>1e-06 -2e-06 2e-06 2.4e-05 9e-06 0</velocity>
           <acceleration>0.001832 4.6e-05 3.8e-05 -0.000417 0.018478 0.000357</acceleration>
           <wrench>2.7e-05 1e-06 1e-06 0 -0 0</wrench>
         </link>
-        <link name='uav3::rotor_0'>
+        <link name='iris3::rotor_0'>
           <pose>0.22001 -0.670118 0.077771 0 -0.002112 1.5708</pose>
           <velocity>2e-06 -2e-06 -6e-06 2.4e-05 4.6e-05 -0</velocity>
           <acceleration>0.002317 1.1e-05 -0.012081 3.14153 0.31825 -3.10908</acceleration>
           <wrench>1.2e-05 0 -6e-05 0 -0 0</wrench>
         </link>
-        <link name='uav3::rotor_1'>
+        <link name='iris3::rotor_1'>
           <pose>-0.199989 -0.930119 0.077222 0 -0.002112 1.5708</pose>
           <velocity>2e-06 -2e-06 7e-06 2.4e-05 4.6e-05 -0</velocity>
           <acceleration>0.002262 4.9e-05 0.011095 3.14153 0.321453 -3.10909</acceleration>
           <wrench>1.1e-05 0 5.5e-05 0 -0 0</wrench>
         </link>
-        <link name='uav3::rotor_2'>
+        <link name='iris3::rotor_2'>
           <pose>-0.21999 -0.67012 0.077771 0 -0.002112 1.5708</pose>
           <velocity>2e-06 -2e-06 1.4e-05 2.4e-05 4.6e-05 -0</velocity>
           <acceleration>0.002316 5.2e-05 0.012089 3.14153 0.324088 -3.10909</acceleration>
           <wrench>1.2e-05 0 6e-05 0 -0 0</wrench>
         </link>
-        <link name='uav3::rotor_3'>
+        <link name='iris3::rotor_3'>
           <pose>0.200011 -0.930118 0.077222 0 -0.002112 1.5708</pose>
           <velocity>2e-06 -2e-06 -1.1e-05 2.4e-05 4.6e-05 -0</velocity>
           <acceleration>0.002262 1.3e-05 -0.010873 3.14153 0.327288 -3.1091</acceleration>
